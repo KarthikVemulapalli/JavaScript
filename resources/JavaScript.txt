@@ -1,0 +1,12 @@
+JavaScript
+
+	DataTypes
+		Number, String, Boolean, Null, Undefined
+
+	Keywords
+		Var - We can Re-Declare and Re-Assign for variable.
+		let - Introduced in ES6 Engine version. We can Re-Assign value for variable.
+		const - Introduced in ES5 Engine version. We cannot Re-Declare or Re-Assign variable.
+
+	Functions
+		console.log() - Prints in Console
