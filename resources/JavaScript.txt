@@ -1,12 +1,78 @@
 JavaScript
 
-	DataTypes
-		Number, String, Boolean, Null, Undefined
+	Versions
+		* ECMAScript (European Computer Manufacturers Association Script)
+		* ES1(1997), ES2(1998), ES3(1999), ES4(Never Released)
+		* ES5(2009), ES6(2015), ES7(2016), ES8(2017), ES8(2017), ES9(2018), ES10(2019), ES11(2020), ES12(2021), ES13(2022), ES14(2023)
+		* The latest version is ES15(2024).
 
-	Keywords
-		Var - We can Re-Declare and Re-Assign for variable.
-		let - Introduced in ES6 Engine version. We can Re-Assign value for variable.
-		const - Introduced in ES5 Engine version. We cannot Re-Declare or Re-Assign variable.
+	Execute JavaScript file via Visual Studio
+		1. Install node in the system and assign gloabl home path under system variables.
+		2. Go to Terminal
+		3. Make sure in terminal the file is path displayed.
+		4. Enter the command 'node <filename>.js'.
+		5. Click enter to execute the file.
 
 	Functions
 		console.log() - Prints in Console
+
+	Variable Keywords
+		var - We can Re-Declare and Re-Assign the variable. (ES5 Version)
+		let - Introduced in ES6 Engine version. We can only Re-Assign value the variable.
+		const - Introduced in ES6 Engine version. We cannot Re-Declare or Re-Assign variable.
+
+		* It is not mandatory to provide keyword for a variable. By default 'var' is considered.
+		* JavaScript will implicity assign the datatype for variable when initiated.
+		* typeof(variable) method gives the data type of variable.
+
+		Variables Access Scope:
+			var - Global/Functional level
+				* If var is initialized outside function it is accessible globally. Can be accessed inside if statement/loops etc.
+				* If var is initialized inside function it is accessible only inside that function.
+			let - Global/Block level
+				* If let is initialized inside block '{}' it is accessible only inside that block.
+				* If let is initialized outside any block it is accessible globally.
+			const - Global/Block level
+				* If const is initialized inside block '{}' it is accessible only inside that block.
+				* If const is initialized outside any block it is accessible globally.
+
+	DataTypes
+		* Javascript has intelligence to pick the desired datatype during run time. Below are some commonly used,
+			Number, String, Boolean, Null, Undefined
+
+	Arrays
+		* Initialize an Arrays
+			Example: var SampleArray = new Array(1,2,3,"String")
+		* Index starts with '0'.
+		* length gives length of the array.
+		* Array[Index] provides value at the index.
+		* push(Element) method adds element at the last index.
+		* pop() method removes the last index element.
+		* unshift(Element) method adds element at the first index.
+		* indexOf(Element) method gives the element index on first occurence. If not present returns '-1'.
+		* lastIndexOf(Element) method gives the element index on last occurence. If not present returns '-1'.
+		* reverse() method reverses the array. This will change the original array.
+		* includes(Element) method provide information if element is present in the array or not. Return true or false.
+		* slice(x, y) method slices the array from x index to (y-1) index. This will not change the original array.
+		* sort() method sorts the array.
+			Number Array in Ascending order
+			String Array in Alphabetical order (Upper to Lower case)
+			Number, String and Boolean Array (Number to Alphabetical order, boolean values are also considered as String)
+
+		Array Functions:
+			1. reduce()
+			2. filter()
+			3. map()
+
+	String
+		* length gives the length of the string.
+		* split(character/string) method splits based on character.
+		* slice(x, y) method slices the string from x index to (y-1) index. This will not change the original array.
+		* parseInt(String) method converts String to Number.
+		* toString() converts to String.
+		* concat() method adds string, this doesn't change the original string.
+			During contact boolean value (true/false) or null are also considered as String.
+				Example: console.log('hello'+true+null)  -> hellotruenull
+		* indexOf(Element) method gives the element index on first occurence. If not present returns '-1'.
+		* indexOf(Element, x) method will search from xth index of string and gives the element index on first occurence. If not present returns '-1'.
+		* lastIndexOf(Element) method gives the element index on last occurence. If not present returns '-1'.
