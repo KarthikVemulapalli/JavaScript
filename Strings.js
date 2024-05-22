@@ -26,3 +26,11 @@ console.log("Concat String - "+ numStr1 + boolVar + nullVar)
 //indexOf() method
 console.log('Index of O - '+StrVar.indexOf('o'))
 console.log('Index of O after 4th Index - '+StrVar.indexOf('o', 5))
+
+
+//Comparing Strings
+console.log(12=='12')        //Loose Equality - This will return true.
+console.log(12==='12')       //Strict Equality - This will return false.
+
+console.log('Hello'=='hello')                                   //returns false because string comparison is case sensitive
+console.log('Hello'.toLowerCase()=='hello'.toLowerCase())       //returns true because string comparison is case sensitive

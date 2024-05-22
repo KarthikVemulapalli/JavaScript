@@ -12,9 +12,12 @@ JavaScript
 		3. Make sure in terminal the file is path displayed.
 		4. Enter the command 'node <filename>.js'.
 		5. Click enter to execute the file.
+	
+	* As JavaScript execution is Asynchronous. It is not mandatory that execution will happen step by step, in case if any step takes longer time to execute javascript will proceed to execute next step.
 
 	Functions
 		console.log() - Prints in Console
+		* If you try to print an user defined function which has no return type, it prints 'undefined'
 
 	Variable Keywords
 		var - We can Re-Declare and Re-Assign the variable. (ES5 Version)
@@ -54,7 +57,7 @@ JavaScript
 		* reverse() method reverses the array. This will change the original array.
 		* includes(Element) method provide information if element is present in the array or not. Return true or false.
 		* slice(x, y) method slices the array from x index to (y-1) index. This will not change the original array.
-		* sort() method sorts the array.
+		* sort() method sorts the array. Will change the original array.
 			Number Array in Ascending order
 			String Array in Alphabetical order (Upper to Lower case)
 			Number, String and Boolean Array (Number to Alphabetical order, boolean values are also considered as String)
@@ -76,3 +79,56 @@ JavaScript
 		* indexOf(Element) method gives the element index on first occurence. If not present returns '-1'.
 		* indexOf(Element, x) method will search from xth index of string and gives the element index on first occurence. If not present returns '-1'.
 		* lastIndexOf(Element) method gives the element index on last occurence. If not present returns '-1'.
+
+	Object
+		* It is a collection of Properties.
+		* Properties in object are defined in key-value pairs. 
+		* Key is always String, Value can be any datatype. Value can also be a function.
+		* Key can be initialized multiple times in single object. Property with latest value will be saved.
+		* Delete property from Object
+			delete Object.PropertyName
+		* Check if property is in Object. 'in' returns true or false
+			'PropertyName' in Object
+		* Get all values in an Object. Using for loop it will iterate through all the properties in object.
+			for (let key in Object){
+				console.log(Object[key])
+			}
+	
+	Class (ES6 Engine)
+		* It is combination of Properties, Methods, Cnstructors
+
+		Property:
+			Instance
+				The value depends on during object creation.
+			Class
+				Value is already defined inside class and remains same for all objects.
+
+		Constructor
+			Default (Non-Parameterized): 
+				Javascript creates default constructor if not created by user.				
+				There can be user defined non-parameterized constructors.
+			Parameterized: 
+				These are user defined constructors with parameters.
+				If user creates a Parameterized constructor, javascript will not create a default constructor.
+				While creating the object if no parameters are passed in Parameterized constructors, default parameter values are passed as 'undefined'.
+
+			* In javascript the constructor should be named as 'constructor'.
+			* There should not be more than one constructor for a class in javascript.
+
+		Inheritance
+			* ChildClass can access all entities (properties/functions) from parent class.
+			* ChildClass should have same constructor same as ParentClass.
+			* ParentClass constructor should be called at first line of ChildClass constructor as super().
+
+	Object vs Class
+		values are restricted to one object.					| we can reuse the entities(properties/methods) multiple times every object creation.
+		assigning values will change the original entity data	| assigning values will not change the original entity behaviour.
+
+	Export/Import Class
+		Exporting class to other files. The below syntax should be written before the class.
+			syntax: 'module.exports='
+		Importing class, the syntax should be at the top of the file.
+			syntax: 'const ClassName = require('./<filename>')'
+
+		* Import and Export syntax are mandatory.
+		* Don't  create any class objects in an export class. Because all the objects created also gets exported. This will create confusion in import file.
